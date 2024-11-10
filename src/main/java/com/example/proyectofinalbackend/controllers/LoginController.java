@@ -30,10 +30,10 @@ public class LoginController {
 			return "redirect:/";
 
 		if(logout != null)
-			model.addAttribute("success","You have logged out");
+			model.addAttribute("exitoso","haz cerrado sesion");
 
 		if(error != null) 
-			model.addAttribute("error","Wrong username or password");
+			model.addAttribute("error","usuario o contraseña incorrecta");
 		
 		model.addAttribute("applicationData", appData);
 			

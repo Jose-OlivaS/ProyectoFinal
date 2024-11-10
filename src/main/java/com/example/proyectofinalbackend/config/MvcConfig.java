@@ -12,9 +12,9 @@ public class MvcConfig implements WebMvcConfigurer{
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		
-		String resourcePath = Paths.get("upload").toAbsolutePath().toUri().toString();
+		String resourcePath = Paths.get("Subir").toAbsolutePath().toUri().toString();
 		
-		registry.addResourceHandler("/upload/**")
+		registry.addResourceHandler("/Subir/**")
 		.addResourceLocations(resourcePath);
 	}
 	

@@ -12,50 +12,50 @@ import com.example.proyectofinalbackend.models.entities.Vehiculo;  // Cambiado a
 
 
 @Service
-public class VehiculoServiceImpl implements VehiculoService {  // Cambiado a VehiculoService
+public class VehiculoServiceImpl implements VehiculoService {
 
-	private final VehiculoDAO vehiculoDAO;  // Cambiado a VehiculoDAO
+	private final VehiculoDAO vehiculoDAO;
 
 	public VehiculoServiceImpl(
-			VehiculoDAO vehiculoDAO  // Cambiado a VehiculoDAO
+			VehiculoDAO vehiculoDAO
 	) {
-		this.vehiculoDAO = vehiculoDAO;  // Cambiado a VehiculoDAO
+		this.vehiculoDAO = vehiculoDAO;
 	}
 
 	@Transactional(readOnly = true)
 	@Override
-	public List<Vehiculo> findAll() {  // Cambiado a Vehiculo
-		return (List<Vehiculo>) vehiculoDAO.findAll();  // Cambiado a VehiculoDAO
+	public List<Vehiculo> findAll() {
+		return (List<Vehiculo>) vehiculoDAO.findAll();
 	}
 
 	@Transactional(readOnly = true)
 	@Override
-	public Page<Vehiculo> findAll(Pageable pageable) {  // Cambiado a Vehiculo
-		return vehiculoDAO.findAll(pageable);  // Cambiado a VehiculoDAO
+	public Page<Vehiculo> findAll(Pageable pageable) {
+		return vehiculoDAO.findAll(pageable);
 	}
 
 	@Transactional(readOnly = true)
 	@Override
-	public Vehiculo findOne(Long id) {  // Cambiado a Vehiculo
-		return vehiculoDAO.findById(id).orElse(null);  // Cambiado a VehiculoDAO
+	public Vehiculo findOne(Long id) {
+		return vehiculoDAO.findById(id).orElse(null);
 	}
 
 	@Transactional
 	@Override
-	public void save(Vehiculo vehiculo) {  // Cambiado a Vehiculo
-		vehiculoDAO.save(vehiculo);  // Cambiado a VehiculoDAO
+	public void save(Vehiculo vehiculo) {
+		vehiculoDAO.save(vehiculo);
 	}
 
 	@Transactional
 	@Override
-	public void remove(Long id) {  // Cambiado a Vehiculo
-		vehiculoDAO.deleteById(id);  // Cambiado a VehiculoDAO
+	public void remove(Long id) {
+		vehiculoDAO.deleteById(id);
 	}
 
 	@Transactional(readOnly = true)
 	@Override
-	public Long count() {  // Cambiado a Vehiculo
-		return vehiculoDAO.count();  // Cambiado a VehiculoDAO
+	public Long count() {
+		return vehiculoDAO.count();
 	}
 
 }

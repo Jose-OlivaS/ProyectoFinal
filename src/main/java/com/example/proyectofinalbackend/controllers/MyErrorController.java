@@ -21,10 +21,10 @@ public class MyErrorController implements ErrorController {
 	        Integer statusCode = Integer.valueOf(status.toString());
 	        model.addAttribute("errorCode",statusCode);
 	        if(statusCode == HttpStatus.NOT_FOUND.value()) {	  
-	        	model.addAttribute("errorMessage1","Page Not Found");
+	        	model.addAttribute("errorMessage1","Pagina no encontrada");
 	            return "errors/error";
 	        } else if(statusCode == HttpStatus.FORBIDDEN.value()) {
-	        	model.addAttribute("errorMessage1","You don't have permission for accessing this resource");
+	        	model.addAttribute("errorMessage1","No tienes persmiso para acceder");
 	        	return "errors/error";
 
 	        } else {
@@ -36,7 +36,7 @@ public class MyErrorController implements ErrorController {
 	    }
 	   
 	    model.addAttribute("errorCode",0);
-	    model.addAttribute("errorMessage1","Unknown error");
+	    model.addAttribute("errorMessage1","error desconocido");
         return "errors/error";
     }
 	

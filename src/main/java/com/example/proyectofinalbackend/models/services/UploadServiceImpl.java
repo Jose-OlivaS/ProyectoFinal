@@ -17,7 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 @Service
 public class UploadServiceImpl implements UploadService {
 
-	final static String UPLOAD_FOLDER = "upload";
+	final static String UPLOAD_FOLDER = "Subido";
 	
 	@Override
 	public Resource load(String filename) throws MalformedURLException {
@@ -26,7 +26,7 @@ public class UploadServiceImpl implements UploadService {
 		Resource resource = null;
 		resource = new UrlResource(pathFile.toUri());
 		if (!resource.exists() || !resource.isReadable())
-			throw new RuntimeException("Error, the file could not be uploaded: " + pathFile.toString());
+			throw new RuntimeException("Error, El documento no pudo ser cargado: " + pathFile.toString());
 		return resource;
 	}
 

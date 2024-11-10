@@ -112,7 +112,7 @@ public class VehiculoController {
 			creating = false;
 		}
 
-		String msg = (vehiculo.getId() == null) ? "Creation successful" : "Update successful";
+		String msg = (vehiculo.getId() == null) ? "Creacion exitosa" : "actualizacion exitosa";
 
 		if(result.hasErrors()) {
 			model.addAttribute("actualpage", page);

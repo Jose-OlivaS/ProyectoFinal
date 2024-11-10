@@ -68,7 +68,7 @@
 	<td>
 	    <a th:href="@{'/cliente/view/'+${entity.id}+'/'+${actualpage}}" title="View"><svg th:replace="layout/icons_svg :: svg-view"></svg></a>
 		<a th:href="@{'/cliente/formup/'+${entity.id}+'/'+${actualpage}}" title="Update"><svg th:replace="layout/icons_svg :: svg-update"></svg></a>
-		<a sec:authorize="hasRole('ROLE_ADMIN')" href="#" title="Delete" th:attr="onclick=|showConfirmation('/cliente/delete/'+'${entity.id}'+'/'+'${actualpage}','Delete element','<strong>'+'${entity.dni}'+'</strong><br>Are you sure you want to delete this element?','Delete')|">
+		<a sec:authorize="hasRole('ROLE_ADMIN')" href="#" title="Delete" th:attr="onclick=|showConfirmation('/cliente/delete/'+'${entity.id}'+'/'+'${actualpage}','Borrar elemento','<strong>'+'${entity.dni}'+'</strong><br>Esta seguro que quiere eliminar este elemento?','Delete')|">
 		<svg th:replace="layout/icons_svg :: svg-delete"></svg></a>
 		<span sec:authorize="!hasRole('ROLE_ADMIN')"><svg th:replace="layout/icons_svg :: svg-delete"></svg></span>
 	</td>

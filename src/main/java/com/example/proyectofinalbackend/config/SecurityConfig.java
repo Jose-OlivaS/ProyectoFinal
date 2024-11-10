@@ -53,12 +53,10 @@ public class SecurityConfig {
  		.and()
  		.logout().permitAll(); 
  		
- 		//************* USED FOR ACCESSING THE H2 CONSOLE WITH SPRING SECURITY
- 		//************* REMOVE IN PRODUCTION!
+
  		http.csrf().disable();
  		http.headers().frameOptions().disable();
- 		//*************
- 		
+
  		return http.build();
  	}
 

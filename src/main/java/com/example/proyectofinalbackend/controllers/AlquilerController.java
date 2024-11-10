@@ -109,7 +109,7 @@ public class AlquilerController {
 			page = 0;
 		Alquiler alquiler = alquilerService.findOne(id);
 		if(alquiler==null) {
-			flash.addFlashAttribute("error","Data not found");
+			flash.addFlashAttribute("error","Datos no encontrados");
 			return "redirect:/alquiler/list/" + page;
 		}
 		
@@ -144,7 +144,7 @@ public class AlquilerController {
 			creating = false;
 		}
 		
-		String msg = (alquiler.getId()==null) ? "Creation successful" : "Update successful";
+		String msg = (alquiler.getId()==null) ? "creacion exitosa" : "carga completadal";
 		
 		if(result.hasErrors()) {
 			model.addAttribute("actualpage", page);
@@ -192,13 +192,13 @@ public class AlquilerController {
 		/* Relations revised, the entity can be removed */
 				alquilerService.remove(id);
 			} else {
-				flash.addFlashAttribute("error","Data not found");
+				flash.addFlashAttribute("error","datos no encontrados");
 				return "redirect:/alquiler/list/" + page;
 			}
 			
 			
 						
-			flash.addFlashAttribute("success","Deletion successful");
+			flash.addFlashAttribute("Exitosa","Eliminacion exitosa");
 		}
 		
 		return "redirect:/alquiler/list/" + page;
@@ -215,7 +215,7 @@ public class AlquilerController {
 			Alquiler alquiler = alquilerService.findOne(id);
 
 			if (alquiler == null) {
-				flash.addFlashAttribute("error", "Data not found");
+				flash.addFlashAttribute("error", "datos no encontrados");
 				return "redirect:/alquiler/list/" + page;
 			}
 
@@ -237,7 +237,7 @@ public class AlquilerController {
 			Alquiler alquiler = alquilerService.findOne(id);
 
 			if (alquiler == null) {
-				flash.addFlashAttribute("error", "Data not found");
+				flash.addFlashAttribute("error", "datos no encontrados");
 				return "redirect:/alquiler/list";
 			}
 
